@@ -22,7 +22,16 @@ const Tours = ({ tours }) => {
     }, [tourList]);
 
     const ResetButton = () => {
-      return (isEmpty && <button className="btn btn-secondary" onClick={()=>resetTours()}>Reset Tours</button>)
+      return (
+        isEmpty && (
+          <React.Fragment>
+            <h4>There are currently no tours available.</h4>
+            <button className='btn btn-secondary' onClick={() => resetTours()}>
+              Reset Tours
+            </button>
+          </React.Fragment>
+        )
+      )
     };
     
     
